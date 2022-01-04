@@ -4,7 +4,7 @@ const commentdata = [
   
   {
     comment_text: 'Beach Vaction count me in!',
-    user_id: 8,
+    user_id: 3,
     post_id: 2,
   },
   {

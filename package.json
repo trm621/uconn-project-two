@@ -1,5 +1,5 @@
 {
-  "name": "UCONN-PROJECT-TWO",
+  "name": "uconn-project-two",
   "version": "1.0.0",
   "description": "beach blog",
   "main": "node server.js",
