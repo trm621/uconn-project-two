@@ -19,7 +19,6 @@ router.get('/', (req, res) => {
         attributes: ['username']
       },
       {
-        // comment data not appearing in Insomnia ???
         model: Comment,
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
@@ -79,10 +78,11 @@ router.get('/:id', (req, res) => {
   // expects {title: 'My second blog post', content: 'bla bla blah', user_id: 1}
 //router.post('/', withAuth, (req, res) => {
     router.post('/', (req, res) => {
+      console.log(req.body)
   Post.create({
     title: req.body.title,
     content: req.body.content,
-    user_id: req.session.user_id
+    user_id: req.body.user_id
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
