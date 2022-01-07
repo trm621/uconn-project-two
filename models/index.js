@@ -2,7 +2,7 @@
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
-
+const Photo = require('./Photo');
 // create associations- verify on deletes working correctly
 
 // User  
@@ -33,5 +33,11 @@ Comment.belongsTo(Post, {
     foreignKey: 'post_id'
   });
 
+Photo.belongsTo(Post, {
+  foreignKey: 'post_id'
+});
 
-module.exports = { User, Post, Comment };
+
+
+
+module.exports = { User, Post, Comment, Photo };

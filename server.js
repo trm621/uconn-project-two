@@ -4,6 +4,8 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 // import sequelize connection-complete
 const sequelize = require('./config/connection');
+const cloudinary = require('./utils/cloudinary');
+const upload = require('./utils/multer');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
