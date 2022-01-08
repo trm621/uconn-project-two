@@ -4,7 +4,7 @@ const upload = require("../../utils/multer");
 
 const { Photo } = require('../../models'); 
 
-// display all comments
+// display all photo files base from the data
 router.get('/', (req, res) => {
   Photo.findAll()
     .then(dbPhotoData => res.json(dbPhotoData))
@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// get photos from cloudinary (determine which get to use)
 router.get("/", async (req, res) => {
     try {
       let photo = await Photo.find();
@@ -22,6 +23,7 @@ router.get("/", async (req, res) => {
       console.log(err);
     }});
 
+// update photo- not needed for MVP
 router.put("/:id", upload.single("image"), async (req, res) => {
         try {
           let photo = await Photo.findById(req.params.id);
@@ -42,7 +44,8 @@ router.put("/:id", upload.single("image"), async (req, res) => {
           console.log(err);
         }});
 
-router.post("/", upload.single("image"), async (req, res) => {
+// post a new photo
+        router.post("/", upload.single("image"), async (req, res) => {
   try {
     // Upload image to cloudinary
     const result = await cloudinary.uploader.upload(req.file.path);
@@ -58,20 +61,19 @@ router.post("/", upload.single("image"), async (req, res) => {
   } catch (err) {
     console.log(err);
   }}); 
-
+  //delete a photo
+  
   router.delete("/:id", async (req, res) => {
     try {
-      // Find user by id
+      // Find photo by id
       let photo = await Photo.findById(req.params.id);
       // Delete image from cloudinary
       await cloudinary.uploader.destroy(photo.cloudinary_id);
-      // Delete user from db
+      // Delete photo from db
       await photo.remove();
       res.json(photo);
     } catch (err) {
       console.log(err);
     }});
-
-
 
  module.exports = router;
