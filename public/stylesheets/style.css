@@ -22,7 +22,6 @@
     font-size: 16px;
   }
   
-  h2,
   h3,
   h4,
   h5,
@@ -33,13 +32,20 @@
     line-height: 1.25;
   }
 
-  h1
+  h2
     {
       font-weight: 700;
       margin: 10px;
       color: var(--dark);
       line-height: 1.25;
     }
+  
+  h1, .welcome-banner {
+    font-size: 75px;
+    color: var(--tertiary);
+    margin-left: 30px;
+    font-family: Impact;
+  }
 
   main {
     display: flex;
@@ -51,7 +57,7 @@
   p {
     font-weight: 400;
     font-size: 1.2rem;
-    margin: 10px
+    margin: 8px
   }
   
   .btn {
