@@ -77,7 +77,7 @@ router.get('/:id', (req, res) => {
 // create a post
   // expects {title: 'My second blog post', content: 'bla bla blah', user_id: 1}
 //router.post('/', withAuth, (req, res) => {
-    router.post('/', (req, res) => {
+  router.post('/', (req, res) => {
       console.log(req.body)
   Post.create({
     title: req.body.title,
