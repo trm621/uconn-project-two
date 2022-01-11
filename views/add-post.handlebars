@@ -1,0 +1,58 @@
+<div class="post card">
+  <div class="card-header">
+  <h2>Upload New Beach Blog Post</h2>
+</div>
+  <form id="new-post-form" class="card-body">
+        <div class="content">
+            <div class="form-div">
+                <label for="post-title">Title</label>
+                <input class="form-input" type="text" id="post-title" name="post-title"/>
+            </div>
+            <div class="form-div">
+                <label for="content">Content</label>
+                <input name="content" id="content" class="form-input"/>
+            </div>
+            <form section="/add" method="post" encType="multipart/form-data">
+            <input type="file" name="sampleImage" accept="image/*"/>
+            <div>
+                <button type="submit" class="btn">Preview</button>
+            </div>
+        </div>
+  </form>
+</section>
+
+<h1>Preview Post</h1>
+<div class="card">
+    {{#each post}}
+
+    {{#if this.beach_image}}
+    <img class="cardimage" src="{{this.beach_image}}" alt="Beach Photo">
+    {{else}}
+    <img class="cardimage" src="/img/default.jpg" alt="Default Beach Photo">
+    
+    <h1 class="blogtitle">{{this.post.title}}</h1>
+    <p class="blogcontent">{{this.post.content}}</p>
+    <button type="button" class="btn">Submit Blog Post</button>
+    {{/each}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Send a message to uconn-project-2-group
+
+
+
+
