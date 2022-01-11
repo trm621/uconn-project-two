@@ -21,7 +21,6 @@
     font-size: 16px;
   }
   
-  h1,
   h2,
   h3,
   h4,
@@ -32,6 +31,16 @@
     color: var(--dark);
     line-height: 1.25;
   }
+
+  h1
+    {
+      font-weight: 700;
+      margin: 10px;
+      color: var(--dark);
+      line-height: 1.25;
+    }
+
+
   
   main {
     margin: 20px auto;
@@ -39,7 +48,9 @@
   }
   
   p {
+    font-weight: 400;
     font-size: 1.2rem;
+    margin: 10px
   }
   
   .btn {
@@ -113,11 +124,6 @@
     background-color: var(--dark);
     color: var(--primary);
   }
-  
-.card-image {
-  width: 200px;
-  height: 200px;
-}
 
   nav {
     display: flex;
@@ -139,10 +145,10 @@
   }
   
   a {
-    font-size: 1.5rem;
+    font-size: 15px;
     background-color: var(--primary);
     color: var(--dark);
-    padding: 0 30px 0 30px;
+    padding: 10px 30px 7px 30px;
     display: inline-block;
     border-radius: var(--border-radius);
     box-shadow: 6px 5px var(--light-dark);
@@ -153,10 +159,10 @@
   
   /* CARDS */
   .card {
+    width: 500px;
     margin: 0 0 20px 0;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
-    
   }
   
   .card-header {
@@ -168,6 +174,10 @@
   
   .card-body {
     padding: 2.5%;
+  }
+
+  .card-image .image {
+    height: 225px;
   }
   
   /* FORM */
