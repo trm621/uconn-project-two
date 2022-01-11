@@ -1,6 +1,6 @@
 :root {
-    --primary: #ccdad1;
-    --secondary: #00addb;
+    --primary: #00addb;
+    --secondary: #ccdad1;
     --tertiary: #e9db8c;
     --light-dark: #666e6f;
     --dark: #38302e;
@@ -114,6 +114,16 @@
     color: var(--primary);
   }
   
+.card-image {
+  width: 200px;
+  height: 200px;
+}
+
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   .hero p {
     max-width: 75%;
   }
@@ -146,6 +156,7 @@
     margin: 0 0 20px 0;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
+    
   }
   
   .card-header {

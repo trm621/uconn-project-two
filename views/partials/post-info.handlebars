@@ -1,9 +1,11 @@
     <article class="post">
       <div class="title">
         <h1>{{title}}</h1>
-        <textarea>
+        <p>
+        {{!-- <textarea> --}}
             {{content}}
-        </textarea>
+        {{!-- </textarea> --}}
+      </p>
       </div>
       <div class="meta">
         Posted by {{user.username}} on {{format_date created_at}}

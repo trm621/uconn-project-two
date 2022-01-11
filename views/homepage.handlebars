@@ -1,8 +1,23 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
+{{#each posts as |post|}}
+<article class="column is-7">
+  <div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="/images/sean-oulashin-KMn4VEeEPR8-unsplash.jpg" alt="Placeholder image">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      {{!-- <div class="media-left"> --}}
+        {{!-- <figure class="image is-48x48">
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+        </figure> --}}
+      {{!-- </div> --}}
+      <div class="media-content">
     {{> post-info post }}
     {{> comments post.comments}}
-  </li>
-  {{/each}}
-</ol>
+      </div>
+    </div>
+</div>
+</article>
+{{/each}}
