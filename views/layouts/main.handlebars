@@ -8,13 +8,23 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<body>
+<header>
+  <h1>Beach Blog</h1>
+</header>
 
-{{ body }}
+ <nav>
+    {{!-- {{#if loggedIn}} --}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{!-- {{else}} --}}
+    <a href="/login"><button id="login">Login</button></a>
+    {{!-- {{/if}} --}}
+    <a href="/add-post"><button id="add-post">Add Post</button></a>
+    <a href="/edit-post"><button id="edit-post">Edit Post</button></a>
+  </nav>
+<body>
+<main>
+{{{ body }}}
+</main>
 
 </body>
-
-<script src="/javascript/login.js"></script>
-<script src="/javascript/logout.js"></script>
-
 </html>
