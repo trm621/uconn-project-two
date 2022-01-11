@@ -1,0 +1,17 @@
+<h1>Your Post History</h1>
+<section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <br>
+      <a href="/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+  </section>
+{{/if}}
