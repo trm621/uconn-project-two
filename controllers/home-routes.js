@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
         // pass a single post object into the homepage template
       res.render('homepage', {
         posts,
-        // loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn
       });
     })
     .catch(err => {
@@ -72,7 +72,7 @@ router.get('/view-posts', (req, res) => {
         // pass a single post object into the homepage template
       res.render('view-posts', {
         posts,
-        // loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn
       });
     })
     .catch(err => {
@@ -118,7 +118,7 @@ router.get('/post/:id', (req, res) => {
       // pass data to template
       res.render('single-post', {
         post,
-        // loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn
       });
     })
     .catch(err => {
@@ -128,10 +128,10 @@ router.get('/post/:id', (req, res) => {
 });
 // render the login page
 router.get('/login', (req, res) => {
-  // if (req.session.loggedIn) {
-  //   res.redirect('/');
-  //   return;
-  // }
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
 
   res.render('login');
 });
@@ -174,7 +174,7 @@ router.get('/edit/:id', (req, res) => {
           
           res.render('edit-post', {
             post,
-            // loggedIn: true
+            loggedIn: true
           });
         } else {
           res.status(404).end();

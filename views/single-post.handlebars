@@ -3,7 +3,7 @@
 {{> post-info post}}
 </div>
 
-{{!-- {{#if loggedIn}} --}}
+{{#if loggedIn}}
 <form class="comment-form">
   <div>
     <input name="content" id="content" class="form-input"/>
@@ -13,13 +13,13 @@
     <button class="comment-button" type="submit">Add comment</button>
   </div>
 </form>
-{{!-- {{/if}} --}}
+{{/if}}
 <br>
 <br>
 {{> comments post.comments}}
 
 </div>
 
-{{!-- {{#if loggedIn}} --}}
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-{{!-- {{/if}} --}}
+{{/if}}
