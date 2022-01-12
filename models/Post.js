@@ -17,10 +17,16 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    imageurl: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+
     // user_id is key and how the tables connect
     user_id: {
       type: DataTypes.INTEGER,

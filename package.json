@@ -8,6 +8,8 @@
     "seed": "cd seeds && node index.js"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.46.0",
+    "aws-sdk": "^2.1055.0",
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.28.1",
     "connect-session-sequelize": "^7.1.2",

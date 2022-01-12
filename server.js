@@ -2,6 +2,14 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const AWS = require('aws-sdk');
+// e.log(err.stack)
+//    else{
+//      console.log(AWS.config.credentials.accessKeyId)
+//    }
+// })AWS.config.getCredentials(function(err){
+//   if (err) consol
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+const saveimage = require('../../utils/saveimage')
 
 // get all posts
 router.get('/', (req, res) => {
@@ -10,6 +11,7 @@ router.get('/', (req, res) => {
       'id',
       'content',
       'title',
+      'imageurl',
       'created_at'
     ],
     order: [["created_at", "DESC"]],
@@ -76,11 +78,14 @@ router.get('/:id', (req, res) => {
 
 // create a post
   // expects {title: 'My second blog post', content: 'bla bla blah', user_id: 1}
+  // set up to grab imiage from AWS
 router.post('/', withAuth, (req, res) => {
+  const urllocation = saveimage();
   Post.create({
     title: req.body.title,
     content: req.body.content,
-    user_id: req.session.user_id
+    user_id: req.session.user_id,
+    imageurl: urllocation
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {

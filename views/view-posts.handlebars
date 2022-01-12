@@ -1,10 +1,13 @@
 {{!-- Need to revise so only see posts you authored/ add an if statement???--}}
+{{#if loggedIn}}
+{{#if posts.length}}
 {{#each posts as |post|}}
 <article id="all-cards" class="column is-3">
   <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
       <img src="/images/sean-oulashin-KMn4VEeEPR8-unsplash.jpg" alt="Placeholder image" class="card-image">
+      {{!-- <img src="{{imageurl}}" alt="Beach image" class="card-image"> --}}
     </figure>
   </div>
   <div class="card-content">
@@ -18,3 +21,5 @@
 </div>
 </article>
 {{/each}}
+{{/if}}
+{{/if}}
