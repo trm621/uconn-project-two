@@ -1,6 +1,6 @@
 :root {
-    --primary: #ccdad1;
-    --secondary: #00addb;
+    --primary: #00addb;
+    --secondary: #ccdad1;
     --tertiary: #e9db8c;
     --light-dark: #666e6f;
     --dark: #38302e;
@@ -9,10 +9,14 @@
   
   * {
     box-sizing: border-box;
+    margin: 0px
+  }
+
+  html {
+    background-color: var(--primary);
   }
   
   body {
-    background-color: var(--primary);
     margin: 0;
     padding: 0;
     font-family: "IBM Plex Sans", sans-serif;
@@ -21,8 +25,6 @@
     font-size: 16px;
   }
   
-  h1,
-  h2,
   h3,
   h4,
   h5,
@@ -32,14 +34,37 @@
     color: var(--dark);
     line-height: 1.25;
   }
+
+  h2
+    {
+      font-weight: 700;
+      margin: 10px;
+      color: var(--dark);
+      line-height: 1.25;
+    }
+  
+  h1, .welcome-banner {
+    font-size: 75px;
+    color: var(--tertiary);
+    margin-left: 30px;
+    font-family: Impact;
+  }
+  
+  #create-prompt {
+    font-size: 24px;
+  }
   
   main {
+    display: flex;
+    flex-wrap: wrap;
     margin: 20px auto;
     width: 94%;
   }
   
   p {
+    font-weight: 400;
     font-size: 1.2rem;
+    margin: 8px
   }
   
   .btn {
@@ -84,6 +109,19 @@
   .btn-inline {
     display: inline;
   }
+
+  .comment-button {
+    padding: 13px
+  }
+
+  .post-history-banner {
+    font-size: 40px;
+    color: var(--tertiary);
+  }
+
+  .post-history-list-items {
+    border: 2px solid var(--light-dark);
+  }
   
   .btn-back {
     border-radius: var(--border-radius);
@@ -113,7 +151,12 @@
     background-color: var(--dark);
     color: var(--primary);
   }
-  
+
+  nav {
+    display: flex;
+    justify-content: end;
+  }
+
   .hero p {
     max-width: 75%;
   }
@@ -129,20 +172,30 @@
   }
   
   a {
-    font-size: 1.5rem;
+    font-size: 15px;
     background-color: var(--primary);
     color: var(--dark);
-    padding: 0 30px 0 30px;
+    padding: 10px 30px 7px 30px;
     display: inline-block;
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
     text-decoration: none;
     align-items: center;
+  }
+
+  .single-post-page {
+    display: block;
+    padding: 5px;
+  }
+
+  .single-post-content {
+    border: 3px solid var(--dark);
   }
   
   
   /* CARDS */
   .card {
+    width: 500px;
+    height: fit-content;
     margin: 0 0 20px 0;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
@@ -157,6 +210,15 @@
   
   .card-body {
     padding: 2.5%;
+  }
+
+  .card-image .image {
+    height: 225px;
+  }
+
+  #all-cards {
+    display: flex;
+    justify-content: space-between;
   }
   
   /* FORM */
@@ -179,7 +241,7 @@
     border: 2px solid var(--light-dark);
     border-radius: var(--border-radius);
   }
-  
+
   /* HEIGHT / WIDTH UTILS */
   .min-100-vh {
     min-height: 100vh;

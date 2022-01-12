@@ -1,13 +1,15 @@
-<h1>Your Post History</h1>
 <section>
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2 class="post-history-banner">Your Posts</h2>
+  <br>
   <ol>
     {{#each posts as |post|}}
     <li>
+      <div class="post-history-list-items"></div>
       {{> post-info post}}
+      </div
       <br>
       <a href="/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
