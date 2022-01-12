@@ -5,27 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beach Blog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
+<header>
+  <a href="/"><h1 id="welcome-banner">Beach Blog</h1></a>
+</header>
+
+ <nav>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+    <a href="/new">Add Post</a>
+    <a href="/view-posts">View Posts</a>
+  </nav>
 <body>
-<form class="signup-form">
-  <div>
-    <label for="username-signup">Username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="password-signup">Password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">Signup</button>
-    <button type="submit">Login</button>
-  </div>
-  </div>
-</form>
-</body>
+<main class="main-content">
+{{{ body }}}
+</main>
 
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
 <script src="/javascript/login.js"></script>
-
+</body>
 </html>
