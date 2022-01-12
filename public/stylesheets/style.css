@@ -105,6 +105,19 @@
   .btn-inline {
     display: inline;
   }
+
+  .comment-button {
+    padding: 13px
+  }
+
+  .post-history-banner {
+    font-size: 40px;
+    color: var(--tertiary);
+  }
+
+  .post-history-list-items {
+    border: 2px solid var(--light-dark);
+  }
   
   .btn-back {
     border-radius: var(--border-radius);
@@ -163,6 +176,15 @@
     border-radius: var(--border-radius);
     text-decoration: none;
     align-items: center;
+  }
+
+  .single-post-page {
+    display: block;
+    padding: 5px;
+  }
+
+  .single-post-content {
+    border: 3px solid var(--dark);
   }
   
   

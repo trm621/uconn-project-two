@@ -1,18 +1,24 @@
+<div class ="single-post-page">
+<div class="single-post-content">
 {{> post-info post}}
+</div>
 
 {{!-- {{#if loggedIn}} --}}
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <input name="content" id="content" class="form-input"/>
   </div>
-
+  <br>
   <div>
-    <button type="submit">add comment</button>
+    <button class="comment-button" type="submit">Add comment</button>
   </div>
 </form>
 {{!-- {{/if}} --}}
-
+<br>
+<br>
 {{> comments post.comments}}
+
+</div>
 
 {{!-- {{#if loggedIn}} --}}
 <script src="/javascript/comment.js"></script>
