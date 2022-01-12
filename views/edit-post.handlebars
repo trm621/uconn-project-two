@@ -4,25 +4,25 @@
   </h2>
   <form class="edit-post-form">
     <div>
+        <div class="form-div">
+            <div>
+      <label for="post-title">Beach Blog Title</label>
       <input name="post-title" type="text" value="{{post.title}}" />
     </div>
-    <div>
-      <h2>
-        Title
-      </h2>
-        <div class="form-div">
-            <label for="content">Content</label>
+            <label for="content">Why is this beach so wonderful?</label>
             <input name="content" id="content" class="form-input" value="{{post.content}}"/>
-        </div>
-            <form section="/add" method="post" encType="multipart/form-data">
-            <input type="file" name="sampleImage" accept="image/*" value="{{post.beach_image}}"/>
+         </div>
+            {{!-- <form section="/add" method="post" encType="multipart/form-data">
+            {{!-- <input type="file" name="sampleImage" accept="image/*" value="{{post.beach_image}}"/>}} --}}
         <div>
     </div>
-    <button type="submit">Save post</button>
+    
+    <button type="submit" class="save-post-btn">Save post</button>
+    <br>
     <button type="button" class="delete-post-btn">Delete post</button>
   </form>
 </article>
-
+{{!-- 
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
@@ -33,8 +33,8 @@
   </div>
 </form>
 
-{{> comments post.comments}}
+{{> comments post.comments}} --}}
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>
+{{!-- <script src="/javascript/comment.js"></script> --}}

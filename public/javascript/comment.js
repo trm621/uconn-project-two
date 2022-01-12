@@ -6,7 +6,7 @@ async function commentFormHandler(event) {
   const post_id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
-  if (comment_text) {
+  if (comment_text && post_id) {
       const response = await fetch('/api/comments', {
         method: 'POST',
         body: JSON.stringify({
@@ -19,11 +19,11 @@ async function commentFormHandler(event) {
       });
     
       if (response.ok) {
-        document.location.reload();
+        document.location.replace("/");
       } else {
         alert(response.statusText);
       }
     }
 }
 
-document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+document.querySelector('#new-comment-form').addEventListener('submit', commentFormHandler);
