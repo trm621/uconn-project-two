@@ -1,14 +1,12 @@
-<article>
-  <h2>
-    Edit Post
-  </h2>
-  <form class="edit-post-form">
-    <div>
+<div class="post card">
+  <div class="card-header">
+    <h2>Edit Your Beach Blog Post</h2>
+  </div>
+  <form class="edit-post-form card-body">
+    <div class="content">
         <div class="form-div">
-            <div>
       <label for="post-title">Beach Blog Title</label>
-      <input name="post-title" type="text" value="{{post.title}}" />
-    </div>
+      <input name="post-title" class= "form-input" type="text" value="{{post.title}}" />
             <label for="content">Why is this beach so wonderful?</label>
             <input name="content" id="content" class="form-input" value="{{post.content}}"/>
          </div>

@@ -3,7 +3,7 @@
     --secondary: #EFE2CC;
     --tertiary: #efd8B5;
     --light-dark: #A6D4F3;
-    --dark: rgb(10, 10, 50);
+    --dark: rgb(21, 21, 101);
     --border-radius: 0.3rem;
   }
   
@@ -239,11 +239,25 @@
   }
   
   /* FORM */
+  .form-div {
+    display: block;
+    min-block-size: 400px;
+  }
   .form-label,
   .form-input,
   .form-textarea {
     display: block;
+    min-block-size: 100px;
+    word-wrap: normal;
   }
+
+  .content {
+    display: block;
+    min-block-size: 200px;
+    word-wrap: normal;
+
+  }
+
   
   .form-label {
     font-size: 1.1rem;
