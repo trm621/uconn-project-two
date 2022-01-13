@@ -3,6 +3,7 @@ const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 const saveimage = require('../../utils/saveimage')
 
+
 // get all posts
 router.get('/', (req, res) => {
   console.log('======================');
@@ -81,6 +82,7 @@ router.get('/:id', (req, res) => {
   // set up to grab imiage from AWS
 router.post('/', withAuth, (req, res) => {
   const urllocation = saveimage();
+
   Post.create({
     title: req.body.title,
     content: req.body.content,

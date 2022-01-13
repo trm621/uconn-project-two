@@ -10,7 +10,6 @@ const AWS = require('aws-sdk');
 // })AWS.config.getCredentials(function(err){
 //   if (err) consol
 
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -45,3 +44,4 @@ app.use(require('./controllers/'));
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
