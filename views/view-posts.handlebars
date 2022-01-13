@@ -1,27 +1,25 @@
-  <div class= "hero">
-  </div>
-<main class="main-content">
-
+{{!-- Need to revise so only see posts you authored/ add an if statement???--}}
+{{#if loggedIn}}
+{{#if posts.length}}
 {{#each posts as |post|}}
 <article id="all-cards" class="column is-3">
   <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
       <img src="/images/sean-oulashin-KMn4VEeEPR8-unsplash.jpg" alt="Placeholder image" class="card-image">
+      {{!-- <img src="{{imageurl}}" alt="Beach image" class="card-image"> --}}
     </figure>
   </div>
   <div class="card-content">
     <div class="media">
-      {{!-- <div class="media-left"> --}}
-        {{!-- <figure class="image is-48x48">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-        </figure> --}}
-      {{!-- </div> --}}
+  
       <div class="media-content">
     {{> post-info post }}
-    {{> comments post.comments}}
+    <a href="/edit/{{post.id}}" class="edit-link">Edit post</a>
       </div>
     </div>
 </div>
 </article>
 {{/each}}
+{{/if}}
+{{/if}}

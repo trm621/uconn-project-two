@@ -1,0 +1,24 @@
+<div class ="single-post-page">
+<div class="single-post-content">
+{{> post-info post}}
+</div>
+
+{{#if loggedIn}}
+<form id="new-comment-form" class='card'>
+  <div class="card-header">
+      <h3>Add New Comment</h3>
+    </div>
+      <input type="hidden" name="post-id" value="{{post.id}}" />
+      
+      <label class="form-label" for="comment-body">Your comments help others enjoy the beach, please insert your comment:</label>
+
+      <textarea name="comment-body" class="form-input"></textarea>
+
+      <button type="submit" class="comment-button">Add Comment</button>
+    </div>
+  </form>
+    
+</div>
+{{/if}}
+
+<script src="/javascript/comment.js"></script>

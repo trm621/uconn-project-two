@@ -1,0 +1,17 @@
+    <article class="post">
+      <div class="title">
+              {{!-- <img src="{{imageurl}}" alt="Beach image" class="card-image"> --}}
+        <h2>{{title}}</h2>
+        <p>
+            {{content}}
+      </p>
+      </div>
+      <div class="meta">
+        <b>Posted by {{user.username}} on {{format_date created_at}}</b>
+        <br>
+        <br>
+        <a href="/post/{{id}}">Click here to comment</a>
+        <br>
+        <br>
+      </div>
+    </article>

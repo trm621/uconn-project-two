@@ -1,0 +1,40 @@
+
+<div class="post card">
+  <div class="card-header">
+    <h2>Edit Your Beach Blog Post</h2>
+  </div>
+  <form class="edit-post-form card-body">
+    <div class="content">
+        <div class="form-div">
+      <label for="post-title">Beach Blog Title</label>
+      <input name="post-title" class= "form-input" type="text" value="{{post.title}}" />
+            <label for="content">Why is this beach so wonderful?</label>
+            <input name="content" id="content" class="form-input" value="{{post.content}}" wrap="hard"/>
+         </div>
+            {{!-- <form section="/add" method="post" encType="multipart/form-data">
+            {{!-- <input type="file" name="sampleImage" accept="image/*" value="{{post.beach_image}}"/>}} --}}
+        <div>
+    </div>
+    
+    <button type="submit" class="save-post-btn">Save post</button>
+    <br>
+    <button type="button" class="delete-post-btn">Delete post</button>
+  </form>
+</article>
+{{!-- 
+
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+
+{{> comments post.comments}} --}}
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+{{!-- <script src="/javascript/comment.js"></script> --}}
