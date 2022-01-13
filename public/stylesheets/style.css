@@ -1,9 +1,9 @@
 :root {
-    --primary: #00addb;
-    --secondary: #ccdad1;
-    --tertiary: #e9db8c;
-    --light-dark: #666e6f;
-    --dark: #38302e;
+    --primary: #76AACE;
+    --secondary: #EFE2CC;
+    --tertiary: #efd8B5;
+    --light-dark: #A6D4F3;
+    --dark: rgb(21, 21, 101);
     --border-radius: 0.3rem;
   }
   
@@ -36,12 +36,12 @@
   }
 
   h2
-    {
-      font-weight: 700;
-      margin: 10px;
-      color: var(--dark);
-      line-height: 1.25;
-    }
+    { 
+        font-size: 30px;
+        color: var(--tertiary);
+        margin-left: 30px;
+        font-family: Impact;
+      }
   
   h1, .welcome-banner {
     font-size: 75px;
@@ -99,6 +99,22 @@
     transform: translate(-1px, -1px);
   }
   
+  .save-post-btn {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    color: whitesmoke;
+    border: none;
+    outline: none;
+    background-color: var(--light-dark);
+    box-shadow: 3px 3px var(--dark);
+    transform: translate(-1px, -1px);
+  }
+
   .btn:hover {
     color: var(--primary);
     background-color: var(--tertiary);
@@ -222,12 +238,24 @@
   }
   
   /* FORM */
+  .form-div {
+    display: block;
+    min-block-size: 400px;
+  }
+
   .form-label,
   .form-input,
   .form-textarea {
     display: block;
+    min-block-size: 100px;
+    word-wrap: normal;
   }
-  
+
+  .content {
+    display: block;
+    min-block-size: 200px;
+  }
+
   .form-label {
     font-size: 1.1rem;
     margin: 0 0 0 5px;

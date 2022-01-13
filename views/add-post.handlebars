@@ -7,24 +7,23 @@
             <div class="form-div">
                 <label for="post-title">Title</label>
                 <input class="form-input" type="text" id="post-title" name="post-title"/>
-            </div>
-            <div class="form-div">
+            {{!-- </div> --}}
+            {{!-- <div class="form-div"> --}}
                 <label for="content">Content</label>
                 <input name="content" id="content" class="form-input"/>
-            </div>
-            <form section="/add" method="post" encType="multipart/form-data">
-            <input type="file" name="sampleImage" accept="image/*"/>
-            <div>
+            {{!-- </div> --}}
+            {{!-- <form section="/add" method="post" encType="multipart/form-data"> --}}
+            {{!-- <input type="file" name="sampleImage" accept="image/*"/> --}}
+            {{!-- <div> --}}
                 <button type="submit" class="btn">Add Post</button>
             </div>
         </div>
   </form>
-</section>
+{{!-- </section> --}}
 
 {{!-- <h1>Preview Post</h1>
 <div class="card">
     {{#each post}}
-
     {{#if this.beach_image}}
     <img class="cardimage" src="{{this.beach_image}}" alt="Beach Photo">
     {{else}}
