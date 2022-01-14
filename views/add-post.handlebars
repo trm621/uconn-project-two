@@ -11,10 +11,11 @@
             {{!-- <div class="form-div"> --}}
                 <label for="content">Content</label>
                 <input name="content" id="content" class="form-input"/>
-            {{!-- </div> --}}
-            {{!-- <form section="/add" method="post" encType="multipart/form-data"> --}}
-            {{!-- <input type="file" name="sampleImage" accept="image/*"/> --}}
-            {{!-- <div> --}}
+            </div>
+            <form action="/images" method="post" encType="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required/>
+            {{!-- <input type="file" name="profile-file" required/> --}}
+             <div>
                 <button type="submit" class="btn">Add Post</button>
             </div>
         </div>

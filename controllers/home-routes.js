@@ -134,6 +134,10 @@ router.get("/new", (req, res) => {
   res.render("add-post");
 });
 
+router.get("/upblogphoto", (req, res) => {
+  res.render("upblogphoto");
+});
+
 router.get("/edit/:id", (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: ["id", "content", "title", "created_at"],
