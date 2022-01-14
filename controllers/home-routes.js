@@ -159,7 +159,6 @@ router.get("/edit/:id", (req, res) => {
     .then((dbPostData) => {
       if (dbPostData) {
         const post = dbPostData.get({ plain: true });
-
         res.render("edit-post", {
           post,
           loggedIn: true,
