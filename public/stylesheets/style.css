@@ -72,7 +72,12 @@
     height: 400px;
     margin-top: 30px;
 }
-  
+
+.today {
+  margin-left: 63px;
+  margin-top: -35px
+}
+
   p {
     font-weight: 400;
     font-size: 1.2rem;
