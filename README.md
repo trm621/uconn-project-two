@@ -23,7 +23,6 @@
 - handlebars
 - mysql2
 - sequelize
-- streamifier
   ## Table of Contents
   - <a href="#usage">Usage</a>
   - <a href="#contributing">Contributing</a>
