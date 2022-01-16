@@ -1,7 +1,7 @@
 const dayjs = require("dayjs");
 
 function today() {
-  return dayjs().format('MM-DD-YYYY');
+  return dayjs().format('MM-D-YYYY');
 }
 
 function format_date(date) {
