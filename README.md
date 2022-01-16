@@ -13,9 +13,7 @@
 - MySQL
 - Handlebars
 ## NPM Packages Used
-- aws-sdk
 - bcrypt
-- cloudinary
 - connect-session-sequelize
 - dayjs
 - dotenv
@@ -23,7 +21,6 @@
 - express-handlebars
 - express-session
 - handlebars
-- multer
 - mysql2
 - sequelize
 - streamifier
