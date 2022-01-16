@@ -1,44 +1,47 @@
-# uconn-project-two Beach Blog
-
-The Beach Blog project is a social media platform in which users can interact with other users from around the world in a moderated environment
-
-## Installation
-
-Clone the file from https://github.com/trm621/uconn-project-two into VS Code Source, then set up npm express and insomnia
-
-```git
-npm install 
-```
-
+# Beach Blog
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+## Description
+### The Beach Blog project is a social media platform in which users can interact with other users from around the world in a moderated environment to share information about their favorite beaches. 
+## Link to Site
+### https://evening-retreat-41294.herokuapp.com/
+## Made With
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express.js
+- MySQL
+- Handlebars
+## NPM Packages Used
+- aws-sdk
+- bcrypt
+- cloudinary
+- connect-session-sequelize
+- dayjs
+- dotenv
+- express
+- express-handlebars
+- express-session
+- handlebars
+- multer
+- mysql2
+- sequelize
+- streamifier
+  ## Table of Contents
+  - <a href="#usage">Usage</a>
+  - <a href="#contributing">Contributing</a>
+  - <a href="#screenshot">Screenshot</a>
+  - <a href="#questions">Questions</a>
 ## Usage
-
-A professional Beach Blog that will have moderated content, commenting, post adding/deleting, and vacation planning integrated into its structure to allow users to openly communicate about their experiences at the beach
-
+### A professional Beach Blog that will have moderated content, commenting, post adding/deleting, and vacation planning integrated into its structure to allow users to openly communicate about their experiences at the beach. 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-Created by Dawn, Mac, Tom, and Noah.
-Please make sure to update tests as appropriate.
-
-## License
-
-MIT License
-
-Copyright (c) [year] [fullname]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. We are currently working in a seperate repository to try and build a feature in which we can upload pictures to the site. See that repository here: https://github.com/dawnleblanc11/photoupload
+## Screenshot
+### ![Imgur](https://imgur.com/TowdYa8.png)
+## Questions
+### If you have any questions, feel free to contact one of the site's creators below! 
+## Created by: 
+### - Dawn LeBlanc (Github: <a href="https://github.com/dawnleblanc11">dawnleblanc11</a>)
+### - Mac Glenn (Github: <a href="https://github.com/MacFGlenn">MacFGlenn</a>)
+### - Tom Maher (Github: <a href="https://github.com/trm621">trm621</a>)
+### - Noah Negron (Github: <a href="https://github.com/noahfred97">noahfred97</a>)
